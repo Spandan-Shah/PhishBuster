@@ -774,3 +774,117 @@ into:
 
 A professional, attention-grabbing preview card.
 
+# 🖼 What Is the “Image” in Social Preview?
+
+----------------------------------------------------------------------
+
+## 📌 Short Answer
+
+It is a **preview image of your website — chosen by YOU.**
+
+It is:
+
+- Not a random screenshot  
+- Not your entire webpage  
+- Not automatically generated  
+
+It is a **specific image file** that you explicitly provide using meta tags.
+
+----------------------------------------------------------------------
+
+## 📍 Where Does It Come From?
+
+You normally define it like this:
+
+```html
+<meta property="og:image" content="https://yourdomain.com/preview.png" />
+<meta name="twitter:image" content="https://yourdomain.com/preview.png" />
+```
+
+The file `preview.png` (or `.jpg`, `.webp`) is:
+
+- A banner image  
+- A hero graphic  
+- A logo + title combination  
+- A marketing card  
+- A custom branded preview  
+
+It is designed specifically for sharing.
+
+----------------------------------------------------------------------
+
+## 🔎 What Happens Internally (Real Flow)
+
+When someone pastes your link on Twitter:
+
+1️⃣ Twitter bot visits your website  
+2️⃣ It reads only the `<head>` section  
+3️⃣ It looks for `twitter:image` (or falls back to `og:image`)  
+4️⃣ It downloads that image  
+5️⃣ It builds the preview card  
+
+Important:
+
+Twitter does NOT screenshot your website.
+
+It only displays the image file you pointed to.
+
+----------------------------------------------------------------------
+
+## 🚫 If You Do NOT Provide an Image
+
+Platforms may:
+
+- Show no image  
+- Pick a random image  
+- Use your favicon  
+- Show a blank preview  
+
+This looks unprofessional and weak.
+
+----------------------------------------------------------------------
+
+## ✅ If You Provide an Image
+
+You fully control branding.
+
+The preview can include:
+
+- Project name  
+- Tagline  
+- Logo  
+- Cyber theme visuals  
+- AI graphics  
+- Marketing message  
+
+For example, for PhishBuster:
+
+- Shield + link icon  
+- AI-themed background  
+- Cybersecurity visuals  
+- Text: "PhishBuster — AI Phishing Detection"  
+
+This is what users see before clicking.
+
+----------------------------------------------------------------------
+
+## 📢 Mental Model
+
+Think of this image as:
+
+```
+Website = Movie
+Preview Image = Poster
+```
+
+People decide whether to click based on the poster.
+
+A strong preview image increases:
+
+- Click-through rate  
+- Brand perception  
+- Trust  
+- Professionalism  
+
+It is one of the most important branding tools in modern web sharing.
+
