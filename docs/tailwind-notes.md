@@ -488,6 +488,75 @@ They act as a **global configuration database**.
 - ❌ Not used for direct styling  
 - ✅ Only stores reusable values  
 
+# 2️⃣ `*` (Universal Selector) — Technical Formatting Layer
+
+## ✅ What is `*`?
+
+The universal selector:
+
+```
+*
+```
+
+Targets **every element on the page**.
+
+This includes:
+
+- `body`
+- `div`
+- `button`
+- `input`
+- `section`
+- literally everything
+
+
+
+## 📌 Primary Purpose
+
+Used for **structural normalization** and layout consistency.
+
+Common uses:
+
+- Margin reset  
+- Padding reset  
+- Box sizing control  
+- Border model correction  
+
+
+
+## 🧾 Example
+
+```css
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+```
+
+
+
+## 🧠 Meaning
+
+The universal selector ensures:
+
+- ✔ Layout consistency  
+- ✔ Predictable spacing  
+- ✔ Uniform sizing behavior  
+- ✔ Reduced browser inconsistencies  
+
+It prepares the mechanical foundation of the page.
+
+
+
+## 🎯 Role Summary
+
+- 🔧 Mechanical preparation  
+- ❌ Not for colors  
+- ❌ Not for theme styling  
+- ❌ Not for typography  
+- ✅ Used for structural formatting  
+
 
 
 
