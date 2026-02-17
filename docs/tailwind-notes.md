@@ -433,6 +433,61 @@ They do **NOT conflict**, because:
 
 Understanding this separation is critical for writing scalable, clean CSS.
 
+# 1️⃣ `:root` — Global Configuration Layer
+
+## ✅ What is `:root`?
+
+`:root` represents the **top-most element** in the document.
+
+In HTML documents:
+
+```
+:root  ≈  html
+```
+
+However, `:root` is more commonly used for defining **CSS variables** (custom properties).
+
+
+
+## 📌 Primary Purpose
+
+- Store **design tokens**
+- Define **theme colors**
+- Configure **spacing systems**
+- Declare **font variables**
+- Centralize app-wide constants
+
+
+
+## 🧾 Example
+
+```css
+:root {
+  --background: 220 20% 6%;
+  --primary: 170 100% 50%;
+  --radius: 8px;
+}
+```
+
+## 🧠 Meaning
+
+Variables declared inside `:root` are:
+
+- ✔ Globally accessible  
+- ✔ Available in every component  
+- ✔ Reusable across utilities  
+- ✔ Centralized for theme switching  
+
+They act as a **global configuration database**.
+
+
+## 🎯 Role Summary
+
+- 🗄️ Acts like a settings file  
+- ❌ Not used for layout  
+- ❌ Not used for direct styling  
+- ✅ Only stores reusable values  
+
 
 
 
