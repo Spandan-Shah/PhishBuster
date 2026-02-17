@@ -555,7 +555,66 @@ It prepares the mechanical foundation of the page.
 - ❌ Not for colors  
 - ❌ Not for theme styling  
 - ❌ Not for typography  
-- ✅ Used for structural formatting  
+- ✅ Used for structural formatting 
+
+# 3️⃣ `body` — Visual Styling Layer
+
+## ✅ What is `body`?
+
+The `body` element is the **main visible container** of the webpage.
+
+Everything displayed on the screen exists inside:
+
+```
+<body> ... </body>
+```
+
+
+
+## 📌 Primary Purpose
+
+Used for:
+
+- Background color
+- Text color
+- Global font family
+- Base typography
+- Scroll behavior
+- Main visual theme
+
+
+## 🧾 Example
+
+```css
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', sans-serif;
+}
+```
+
+
+
+## 🧠 Meaning
+
+The `body` selector controls:
+
+- ✔ Overall appearance  
+- ✔ Global theme colors  
+- ✔ Default typography  
+- ✔ Base layout experience  
+
+This is where configuration becomes **visible design**.
+
+
+
+## 🎯 Role Summary
+
+- 🎨 Visual styling  
+- 🎨 Theming  
+- 🎨 Typography  
+- ❌ Not for low-level layout resets  
+
 
 
 
