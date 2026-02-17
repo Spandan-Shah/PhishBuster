@@ -614,4 +614,163 @@ OpenGraph ensures your link looks intentional — not accidental.
 
 It transforms a raw URL into a branded content card.
 
+# 🐦 Twitter Card Meta Tag
+
+----------------------------------------------------------------------
+
+## 📌 What Is a Twitter Card?
+
+Your code:
+
+```html
+<meta name="twitter:card" content="summary_large_image" />
+```
+
+This is called a **Twitter Card meta tag**.
+
+It tells Twitter (X) how your website link should appear when someone shares it.
+
+Just like OpenGraph controls previews on:
+
+- WhatsApp  
+- LinkedIn  
+- Facebook  
+
+Twitter Card controls previews **only on Twitter (X)**.
+
+----------------------------------------------------------------------
+
+## 🔎 What Happens When Someone Posts Your Link?
+
+When a tweet contains:
+
+```
+https://phishbuster.ai
+```
+
+Twitter internally performs these steps:
+
+1️⃣ Twitter bot visits your website  
+2️⃣ Reads only the `<head>` section  
+3️⃣ Searches for `twitter:*` meta tags  
+4️⃣ Builds a preview card from that data  
+
+If this tag exists → Large, professional preview  
+If missing → Small, plain link  
+
+----------------------------------------------------------------------
+
+## 🚫 Without Twitter Card
+
+Twitter displays:
+
+```
+https://phishbuster.ai
+```
+
+Possibly:
+
+- Small title  
+- No large image  
+- Low visual impact  
+
+Result:
+
+- Looks amateur  
+- Easy to ignore  
+- Lower click-through rate  
+
+----------------------------------------------------------------------
+
+## ✅ With `twitter:card="summary_large_image"`
+
+Twitter displays:
+
+- Large banner image  
+- Bold title  
+- Description text  
+
+It looks like:
+
+```
+[ LARGE IMAGE ]
+Title
+Description
+```
+
+Instead of:
+
+```
+[ small icon ] Title
+```
+
+This makes your link feel like:
+
+- A news article  
+- A startup launch  
+- A professional product page  
+
+----------------------------------------------------------------------
+
+## 🔍 What Does `summary_large_image` Mean?
+
+Breaking it down:
+
+```
+summary_large_image
+```
+
+- `summary` → Show title + description  
+- `large_image` → Use a big banner image  
+
+So Twitter renders:
+
+```
+[ BIG IMAGE ]
+Title
+Description
+```
+
+Not a small thumbnail.
+
+----------------------------------------------------------------------
+
+## 📢 Mental Model
+
+Think of your link as advertising space inside the Twitter feed.
+
+Without Twitter Card:
+
+```
+Small roadside sign
+Minimal attention
+```
+
+With `summary_large_image`:
+
+```
+Large billboard
+Strong visual impact
+Clear message
+```
+
+Users are more likely to stop scrolling.
+
+----------------------------------------------------------------------
+
+## 🎯 Conclusion
+
+The tag:
+
+```html
+<meta name="twitter:card" content="summary_large_image" />
+```
+
+transforms your shared link from:
+
+Plain URL
+
+into:
+
+A professional, attention-grabbing preview card.
 
