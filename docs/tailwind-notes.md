@@ -613,7 +613,45 @@ This is where configuration becomes **visible design**.
 - 🎨 Visual styling  
 - 🎨 Theming  
 - 🎨 Typography  
-- ❌ Not for low-level layout resets  
+- ❌ Not for low-level layout resets
+
+# ⚖️ Do `*` and `body` Conflict?
+
+## ❌ No — Because of Specificity Rules
+
+CSS follows specificity hierarchy.
+
+Example:
+
+```css
+* { background: red; }
+body { background: black; }
+```
+
+### Final Result:
+
+👉 The body background becomes **black**
+
+### Why?
+
+Because:
+
+```
+body  >  *
+```
+
+`body` is more specific than the universal selector.
+
+So even if `*` sets something, `body` can override it.
+
+
+# 🧩 Layer Responsibilities Summary
+
+| Selector | Responsibility |
+|-----------|---------------|
+| `:root` | Global variables / configuration |
+| `*` | Layout normalization / formatting |
+| `body` | Visual styling / theme |
 
 
 
