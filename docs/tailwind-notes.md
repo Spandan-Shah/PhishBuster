@@ -653,6 +653,20 @@ So even if `*` sets something, `body` can override it.
 | `*` | Layout normalization / formatting |
 | `body` | Visual styling / theme |
 
+# 🏗️ Real-World Analogy
+
+### `:root`
+📒 Blueprint / configuration file  
+Stores all settings before construction begins  
+
+### `*`
+🔧 Construction rules  
+Defines structural mechanics of the building  
+
+### `body`
+🎨 Interior design  
+Applies paint, lighting, decoration, and atmosphere  
+
 
 
 
