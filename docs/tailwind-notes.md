@@ -411,3 +411,29 @@ Creates:
 A centered, soft, glowing light behind your element.
 
 
+# 📘 CSS GLOBAL STRUCTURE NOTES  
+## ( :root vs * vs body — Tailwind + CSS Fundamentals )
+
+
+# 🧠 Introduction
+
+In modern CSS (especially when working with **Tailwind CSS**), three selectors appear frequently:
+
+- `:root`
+- `*`
+- `body`
+
+Each selector has a **distinct responsibility** within the styling architecture.
+
+They do **NOT conflict**, because:
+
+- They serve different purposes  
+- They operate at different abstraction levels  
+- CSS specificity rules define clear priority  
+
+Understanding this separation is critical for writing scalable, clean CSS.
+
+
+
+
+
