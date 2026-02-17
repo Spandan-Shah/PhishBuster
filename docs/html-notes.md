@@ -477,3 +477,141 @@ That is the true purpose of:
 initial-scale=1.0
 ```
 
+# 🌐 Social Sharing Preview — OpenGraph (OG) Meta Tags
+
+----------------------------------------------------------------------
+
+## 📌 What Are OpenGraph (OG) Tags?
+
+These tags:
+
+```html
+<meta property="og:title" content="..." />
+<meta property="og:description" content="..." />
+<meta property="og:type" content="..." />
+```
+
+are called **OpenGraph meta tags**.
+
+They control how your website appears when someone shares your link on social media platforms.
+
+Important:
+
+- They do NOT change your webpage layout  
+- They only affect link previews  
+- They are read by social media bots  
+
+----------------------------------------------------------------------
+
+## 🔎 What Actually Happens When You Paste a Link?
+
+Imagine you paste:
+
+```
+https://yourwebsite.com
+```
+
+into:
+
+- WhatsApp  
+- LinkedIn  
+- Facebook  
+- Discord  
+- Slack  
+
+Before showing anything, these platforms do the following silently:
+
+----------------------------------------------------------------------
+
+### Step 1
+
+They send a crawler (bot) to your website.
+
+----------------------------------------------------------------------
+
+### Step 2
+
+The bot reads ONLY the `<head>` section of your HTML.
+
+It does NOT render your full page like a browser.
+
+----------------------------------------------------------------------
+
+### Step 3
+
+The bot specifically searches for:
+
+- `og:title`  
+- `og:description`  
+- `og:type`  
+- `og:image` (if available)  
+
+----------------------------------------------------------------------
+
+### Step 4
+
+The platform builds a preview card using that metadata.
+
+----------------------------------------------------------------------
+
+## 🚫 Without OpenGraph Tags
+
+If OG tags are missing, the platform cannot generate a rich preview.
+
+You get:
+
+```
+https://phishbuster.ai
+```
+
+That’s it.
+
+- No title  
+- No description  
+- No image  
+- No branding  
+
+Just a plain, boring URL.
+
+----------------------------------------------------------------------
+
+## ✅ With OpenGraph Tags
+
+If OG tags are present, the platform creates a rich preview card:
+
+```
+📦 Preview Card
+📰 Large Title
+🧾 Description Text
+🖼 Featured Image (if provided)
+```
+
+Example:
+
+```
+PhishBuster — AI Phishing Detection
+Intelligent phishing URL detection powered by ML
+```
+
+This makes the link:
+
+- Professional  
+- Trustworthy  
+- Clickable  
+- Brand-consistent  
+
+----------------------------------------------------------------------
+
+## 🎯 Why OG Tags Matter
+
+In modern web applications:
+
+- Social sharing drives traffic  
+- First impressions matter  
+- Preview cards influence click behavior  
+
+OpenGraph ensures your link looks intentional — not accidental.
+
+It transforms a raw URL into a branded content card.
+
+
