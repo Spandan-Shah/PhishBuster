@@ -61,3 +61,10 @@ When a user is denied access to a link without an explanation, they often percei
 Attackers use dynamic URL shortening and **Punycode attacks** (e.g., `googIe.com` vs `google.com`). Without a scorecard to measure these nuances, users are prone to poor decision-making.
 
 
+## 🎯 The Objective
+
+The goal of **PhishBuster** is to bridge the gap between complex security analysis and everyday usability. 
+
+* **Transition:** Move from simple detection to **comprehensive risk quantification**.
+* **The Scorecard:** Provide a **0-100 safety score** backed by transparent reasoning.
+* **Empowerment:** Transform a passive user into an **informed gatekeeper** of their own digital security via an AI-enhanced GUI.
