@@ -1,88 +1,15 @@
-/*
-    This import is for downloading the fonts from Google Fonts. The actual font usage is defined in the :root selector below.
-    The used fonts are: JetBrains Mono for monospaced text and Inter for sans-serif text.
-*/
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
 
+@plugin "tailwindcss-animate";
+@custom-variant dark (&:is(.dark *));
 
-/*
-    This file defines the global styles for the application using Tailwind CSS. It sets up custom color variables, typography, and utility classes for consistent styling across the app.
-*/
-
-/* Tailwind Base:
-   Resets browser default styles (margin, fonts, headings, etc.)
-   Gives a clean starting point for styling 
-*/
 @tailwind base;
-
-/* Tailwind Components:
-   Loads reusable UI styles like buttons, cards,
-   and any custom classes created using @apply 
-*/
 @tailwind components;
-
-/* Tailwind Utilities:
-   Loads all Tailwind utility classes (bg-*, text-*, p-*, flex, etc.)
-   THIS is what lets us style directly in HTML 
-*/
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 220 20% 6%;
-    --foreground: 180 10% 90%;
-
-    --card: 220 18% 10%;
-    --card-foreground: 180 10% 90%;
-
-    --popover: 220 18% 10%;
-    --popover-foreground: 180 10% 90%;
-
-    --primary: 170 100% 50%;
-    --primary-foreground: 220 20% 6%;
-
-    --secondary: 220 15% 16%;
-    --secondary-foreground: 180 10% 80%;
-
-    --muted: 220 15% 14%;
-    --muted-foreground: 220 10% 50%;
-
-    --accent: 140 80% 55%;
-    --accent-foreground: 220 20% 6%;
-
-    --destructive: 0 85% 55%;
-    --destructive-foreground: 0 0% 100%;
-
-    --warning: 38 95% 55%;
-    --warning-foreground: 220 20% 6%;
-
-    --safe: 140 70% 45%;
-    --safe-foreground: 220 20% 6%;
-
-    --border: 220 15% 18%;
-    --input: 220 15% 14%;
-    --ring: 170 100% 50%;
-
-    --radius: 0.75rem;
-
-    --glow-primary: 0 0 20px hsl(170 100% 50% / 0.3);
-    --glow-accent: 0 0 20px hsl(140 80% 55% / 0.3);
-    --glow-destructive: 0 0 20px hsl(0 85% 55% / 0.3);
-    --glow-warning: 0 0 20px hsl(38 95% 55% / 0.3);
-
-    --font-mono: 'JetBrains Mono', monospace;
-    --font-sans: 'Inter', system-ui, sans-serif;
-
-    --sidebar-background: 220 18% 8%;
-    --sidebar-foreground: 180 10% 90%;
-    --sidebar-primary: 170 100% 50%;
-    --sidebar-primary-foreground: 220 20% 6%;
-    --sidebar-accent: 220 15% 16%;
-    --sidebar-accent-foreground: 180 10% 80%;
-    --sidebar-border: 220 15% 18%;
-    --sidebar-ring: 170 100% 50%;
-  }
-}
+/* ================================================= */
+/* BASE LAYER */
+/* ================================================= */
 
 @layer base {
   * {
@@ -98,31 +25,26 @@
   }
 }
 
+/* ================================================= */
+/* UTILITIES */
+/* ================================================= */
+
 @layer utilities {
-  .glow-primary {
-    box-shadow: var(--glow-primary);
-  }
-  .glow-accent {
-    box-shadow: var(--glow-accent);
-  }
-  .glow-destructive {
-    box-shadow: var(--glow-destructive);
-  }
-  .glow-warning {
-    box-shadow: var(--glow-warning);
-  }
-  .text-glow-primary {
-    text-shadow: 0 0 10px hsl(170 100% 50% / 0.5);
-  }
-  .text-glow-accent {
-    text-shadow: 0 0 10px hsl(140 80% 55% / 0.5);
-  }
+  .glow-primary { box-shadow: 0 0 20px hsl(170 100% 50% / 0.4); }
+  .glow-accent { box-shadow: 0 0 20px hsl(140 80% 55% / 0.4); }
+  .glow-destructive { box-shadow: 0 0 20px hsl(0 80% 50% / 0.4); }
+  .glow-warning { box-shadow: 0 0 20px hsl(45 100% 50% / 0.4); }
+
+  .text-glow-primary { text-shadow: 0 0 10px hsl(170 100% 50% / 0.5); }
+  .text-glow-accent { text-shadow: 0 0 10px hsl(140 80% 55% / 0.5); }
+
   .bg-grid {
-    background-image: 
+    background-image:
       linear-gradient(hsl(220 15% 18% / 0.5) 1px, transparent 1px),
       linear-gradient(90deg, hsl(220 15% 18% / 0.5) 1px, transparent 1px);
     background-size: 40px 40px;
   }
+
   .bg-scanline {
     background: repeating-linear-gradient(
       0deg,
@@ -132,4 +54,90 @@
       hsl(170 100% 50% / 0.02) 4px
     );
   }
+}
+
+/* ================================================= */
+/* ROOT TOKENS (LIGHT) */
+/* ================================================= */
+
+:root {
+  --radius: 0.625rem;
+
+  --background: 220 20% 6%;
+  --foreground: 180 10% 90%;
+
+  --card: 220 18% 10%;
+  --card-foreground: 180 10% 90%;
+
+  --popover: 220 18% 10%;
+  --popover-foreground: 180 10% 90%;
+
+  --primary: 170 100% 50%;
+  --primary-foreground: 220 20% 6%;
+
+  --secondary: 220 15% 16%;
+  --secondary-foreground: 180 10% 80%;
+
+  --muted: 220 15% 14%;
+  --muted-foreground: 180 8% 60%;
+
+  --accent: 140 80% 55%;
+  --accent-foreground: 220 20% 6%;
+
+  --destructive: 0 80% 50%;
+  --destructive-foreground: 0 0% 100%;
+
+  --warning: 45 100% 50%;
+  --warning-foreground: 0 0% 0%;
+
+  --safe: 140 80% 45%;
+  --safe-foreground: 0 0% 100%;
+
+  --border: 220 15% 18%;
+  --input: 220 15% 18%;
+  --ring: 170 100% 50%;
+
+  --sidebar: 220 18% 10%;
+  --sidebar-background: var(--sidebar);
+  --sidebar-foreground: 180 10% 90%;
+  --sidebar-primary: 170 100% 50%;
+  --sidebar-primary-foreground: 220 20% 6%;
+  --sidebar-accent: 220 15% 16%;
+  --sidebar-accent-foreground: 180 10% 90%;
+  --sidebar-border: 220 15% 18%;
+  --sidebar-ring: 170 100% 50%;
+}
+
+/* ================================================= */
+/* DARK MODE */
+/* ================================================= */
+
+.dark {
+  --background: 220 20% 4%;
+  --foreground: 180 10% 95%;
+
+  --card: 220 18% 8%;
+  --card-foreground: 180 10% 95%;
+
+  --popover: 220 18% 8%;
+  --popover-foreground: 180 10% 95%;
+
+  --primary: 170 100% 50%;
+  --primary-foreground: 220 20% 6%;
+
+  --secondary: 220 15% 14%;
+  --secondary-foreground: 180 10% 85%;
+
+  --muted: 220 15% 12%;
+  --muted-foreground: 180 8% 65%;
+
+  --accent: 140 80% 55%;
+  --accent-foreground: 220 20% 6%;
+
+  --border: 220 15% 16%;
+  --input: 220 15% 16%;
+}
+html, body, #root {
+  height: 100%;
+  background: hsl(var(--background));
 }
