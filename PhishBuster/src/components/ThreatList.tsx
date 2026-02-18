@@ -58,3 +58,5 @@ export function ThreatList({ findings }: ThreatListProps) {
     </div>
   );
 }
+
+
