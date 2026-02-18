@@ -2,8 +2,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shield, Search, Zap, Terminal } from "lucide-react";
 import { analyzeUrl, type AnalysisResult } from "@/lib/phishing-engine";
-import { RiskGauge } from "@/components/RiskGauge";
-import { ThreatList } from "@/components/ThreatList";
+import { RiskGauge } from "../components/RiskGauge";
+import { ThreatList } from "../components/ThreatList";
+
 
 const Index = () => {
   const [url, setUrl] = useState("");
@@ -21,7 +22,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background bg-grid relative overflow-hidden">
+   <div className="min-h-screen bg-grid relative overflow-hidden">
       <div className="fixed inset-0 bg-scanline pointer-events-none z-50" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/5 blur-[120px] rounded-full" />
 
